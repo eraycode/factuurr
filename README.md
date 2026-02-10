@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Factuurr 🚀
 
-## Getting Started
+Factuurr is een razendsnelle, privacy-vriendelijke web-applicatie voor het genereren van professionele facturen en offertes, specifiek ontworpen voor de Belgische markt.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Facturen & Offertes**: Schakel eenvoudig tussen het maken van een factuur of een offerte.
+- **Belgische Wetgeving**: Ingebouwde ondersteuning voor de "Bijzondere vrijstellingsregeling kleine ondernemingen" (Vrijgesteld van BTW).
+- **Live Preview**: Bekijk direct hoe je document eruit ziet terwijl je typt.
+- **PDF Export**: Download je documenten als hoogwaardige PDF-bestanden.
+- **Logo Support**: Upload je eigen bedrijfslogo voor een professionele uitstraling op al je documenten.
+- **Instellingen Opslaan**: Exporteer en importeer je bedrijfsgegevens via een JSON-bestand, zodat je ze nooit twee keer hoeft in te vullen.
+- **Dark Mode**: Oogvriendelijk ontwerp voor de late uurtjes, volledig responsief.
+- **Privacy First**: Geen database, geen cloud-opslag. Al je gegevens blijven 100% in je eigen browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Technologie
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling**: Vanilla CSS met een gepersonaliseerd Premium Design System.
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **PDF Generatie**: [jsPDF](https://github.com/parallax/jsPDF) & [html2canvas](https://html2canvas.hertzen.com/)
+- **Type Safety**: TypeScript
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Aan de slag
 
-## Learn More
+### Installatie
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone de repository:
+   ```bash
+   git clone https://github.com/jouwgebruikersnaam/factuurr.git
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Installeer de benodigde pakketten:
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Start de ontwikkelomgeving:
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+4. Open [http://localhost:3000](http://localhost:3000) in je browser om de app te gebruiken.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📝 Gebruik
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Bedrijfsgegevens**: Vul je eigen gegevens in bij de sectie "Mijn Bedrijfsgegevens".
+2. **Bespaar Tijd**: Klik op de **Export** knop om je gegevens op te slaan als een `.json` bestand. Bij een volgend bezoek kun je dit bestand simpelweg **Importeren**.
+3. **Opstellen**: Voeg items toe, geef ze een naam en een uitgebreide beschrijving. Pas aantallen en prijzen aan.
+4. **BTW**: Schakel de "Kleine onderneming" modus in als je vrijgesteld bent van BTW. De app voegt automatisch de wettelijk verplichte vermelding toe.
+5. **Downloaden**: Zodra je tevreden bent met het live voorbeeld, klik je op **Download PDF**.
+
+## 📄 Licentie
+
+Dit project is beschikbaar onder de MIT-licentie.
