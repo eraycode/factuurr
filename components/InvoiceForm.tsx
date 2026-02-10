@@ -404,6 +404,7 @@ export default function InvoiceForm() {
                             <div>
                                 <label>Nummer</label>
                                 <input
+                                    className="invoice-number-input"
                                     value={isQuotation ? quotation.quotationNumber : invoice.invoiceNumber}
                                     onChange={(e) => isQuotation ? setQuotation({ ...quotation, quotationNumber: e.target.value }) : setInvoice({ ...invoice, invoiceNumber: e.target.value })}
                                     style={{ width: '100%' }}
@@ -421,7 +422,7 @@ export default function InvoiceForm() {
                                     Kleine onderneming (vrijgesteld van BTW)
                                 </label>
                             </div>
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                            <div className="date-grid" style={{ display: 'grid', gap: '1rem' }}>
                                 <div className="label-group">
                                     <label>Datum</label>
                                     <input
@@ -436,7 +437,7 @@ export default function InvoiceForm() {
                                     />
                                 </div>
                                 <div className="label-group">
-                                    <label>{isQuotation ? 'Geldig tot' : 'Vervaldatum'}</label>
+                                    <label className="label-wrap">{isQuotation ? 'Geldig tot' : <>Verval<wbr />datum</>}</label>
                                     <input
                                         type="date"
                                         value={isQuotation ? quotation.validUntil : invoice.dueDate}
@@ -563,7 +564,7 @@ export default function InvoiceForm() {
                     </div>
                 </div>
 
-                <div className="preview-section card glass" style={{ position: 'sticky', top: '2rem', height: 'fit-content', padding: '1rem', overflow: 'hidden' }}>
+                <div className="preview-section card glass" style={{ position: 'sticky', top: '2rem', height: 'fit-content', padding: '1rem', overflow: 'auto' }}>
                     <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <h3 style={{ color: 'var(--muted)', fontSize: 'clamp(1rem, 4vw, 1.25rem)' }}>Live Voorbeeld</h3>
                     </div>

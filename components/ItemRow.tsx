@@ -12,7 +12,7 @@ interface ItemRowProps {
 
 export default function ItemRow({ item, onUpdate, onRemove, isVatExempt }: ItemRowProps) {
   return (
-    <div className="item-row animate-fade-in responsive-item-row" style={{ alignItems: 'center', marginBottom: '1.5rem', padding: '1rem', border: '1px solid var(--border)', borderRadius: 'var(--radius)' }}>
+    <div className="item-row animate-fade-in responsive-item-row" style={{ alignItems: 'flex-start', textAlign: 'left', marginBottom: '1.5rem', padding: '1rem', border: '1px solid var(--border)', borderRadius: 'var(--radius)' }}>
 
       <div style={{ display: 'grid', gap: '0.75rem' }}>
         <div>

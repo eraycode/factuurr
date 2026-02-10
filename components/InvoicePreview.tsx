@@ -21,7 +21,7 @@ const InvoicePreview = forwardRef<HTMLDivElement, InvoicePreviewProps>(({ data, 
             style={{
                 padding: '3rem',
                 minHeight: '1100px',
-                width: '100%',
+                width: '800px',
                 maxWidth: '800px',
                 margin: '0 auto',
                 color: '#000',

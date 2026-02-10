@@ -29,7 +29,7 @@
   --card-bg: rgba(30, 41, 59, 0.7);
   --foreground: #f8fafc;
   --muted: #94a3b8;
-  --border: #334155;
+  --border: #475569;
   --glass-bg: rgba(15, 23, 42, 0.8);
   --glass-border: rgba(255, 255, 255, 0.08);
 }
@@ -74,41 +74,72 @@
 
 /* Mobile scaling for preview */
 .preview-wrapper {
+  --preview-width: 800px;
+  --preview-height: 1100px;
+  --preview-scale: 1;
+  width: max-content;
+  height: auto;
+  margin: 0 auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
+}
+
+.preview-wrapper .invoice-preview {
+  width: var(--preview-width);
+  min-height: var(--preview-height);
   transform-origin: top center;
-  transition: transform 0.2s ease;
+}
+
+.preview-section {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
 }
 
 @media (max-width: 1200px) {
   .preview-wrapper {
-    transform: scale(0.85);
+    --preview-scale: 1;
   }
 }
 
 @media (max-width: 1024px) {
   .preview-wrapper {
-    transform: scale(0.75);
+    --preview-scale: 1;
   }
 }
 
 @media (max-width: 768px) {
   .preview-wrapper {
-    transform: scale(0.55);
+    --preview-scale: 1;
   }
 
   .preview-section {
     padding: 0.5rem !important;
+    position: static !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .preview-wrapper {
+    overflow-x: auto;
+  }
+
+  .preview-wrapper .invoice-preview {
+    transform: none;
   }
 }
 
 @media (max-width: 480px) {
   .preview-wrapper {
-    transform: scale(0.4);
+    --preview-scale: 1;
   }
 }
 
 @media (max-width: 380px) {
   .preview-wrapper {
-    transform: scale(0.35);
+    --preview-scale: 1;
   }
 }
 
@@ -121,6 +152,12 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (max-width: 520px) {
+  html {
+    font-size: 14px;
+  }
 }
 
 h1,
@@ -137,6 +174,14 @@ h4 {
   max-height: none;
   overflow-y: visible;
   width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+.main-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 @media (min-width: 1024px) {
@@ -149,6 +194,16 @@ h4 {
 
 .mobile-grid-1-tablet-2 {
   grid-template-columns: 1fr;
+}
+
+.date-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 520px) {
+  .date-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (min-width: 600px) {
@@ -184,6 +239,26 @@ h4 {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+.label-wrap {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.form-section * {
+  max-width: 100%;
+}
+
+.invoice-number-input {
+  width: 100%;
+  max-width: 420px;
+}
+
+@media (max-width: 520px) {
+  .invoice-number-input {
+    max-width: 260px;
+  }
 }
 
 @media (min-width: 1024px) {
